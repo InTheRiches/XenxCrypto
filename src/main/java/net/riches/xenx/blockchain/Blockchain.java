@@ -19,12 +19,13 @@ public class Blockchain {
     private ArrayList<Transaction> pendingTransactions;
     private int difficulty;
     private int minerRewards;
-    private int blockSize;
+    private final int blockSize;
 
     public Blockchain() {
         this.chain = new ArrayList<>();
         pendingTransactions = new ArrayList<>();
         this.blockSize = 1;
+        this.difficulty = 1;
     }
 
     public boolean addTransaction(Address sender, Address receiver, int amount, PublicKey key, KeyPair senderKey) throws Exception {
@@ -73,7 +74,7 @@ public class Blockchain {
             Block newBLock = new Block(LocalDateTime.now(), chain.size(), transactionSlice);
             String hash = (chain.size() == 0) ? "" : getLastBlock().getHash();
             newBLock.setPrev(hash);
-            newBLock.mineBlock(3);
+            newBLock.mineBlock(difficulty);
             chain.add(newBLock);
         }
         return true;
