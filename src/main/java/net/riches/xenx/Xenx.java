@@ -1,9 +1,10 @@
 package net.riches.xenx;
 
+import net.riches.web.server.HttpServer;
+import net.riches.web.server.impl.BasicHttpServer;
 import net.riches.xenx.blockchain.Blockchain;
 
 import java.io.File;
-import java.net.ServerSocket;
 import java.nio.file.Files;
 import java.security.KeyFactory;
 import java.security.KeyPair;
@@ -15,29 +16,11 @@ import java.security.spec.X509EncodedKeySpec;
 
 public class Xenx {
 
-    private static final int PORT = 8080;
+    private static HttpServer server;
 
     public static void main(String[] args) throws Exception {
-        try {
-            ServerSocket serverConnect = new ServerSocket(PORT);
-            System.out.println("Server started.\nListening for connections on port : " + PORT + " ...\n");
-
-            // we listen until user halts server execution
-            while (true) {
-                Server myServer = new Server(serverConnect.accept());
-
-                if (verbose) {
-                    System.out.println("Connecton opened. (" + new Date() + ")");
-                }
-
-                // create dedicated thread to manage the client connection
-                Thread thread = new Thread(myServer);
-                thread.start();
-            }
-
-        } catch (Exception e) {
-            System.err.println("Server Connection error : " + e.getMessage());
-        }
+        server = new BasicHttpServer(8080);
+        server.start();
 
         Blockchain chain = new Blockchain();
 
