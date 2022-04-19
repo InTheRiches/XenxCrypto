@@ -1,4 +1,4 @@
-package net.riches.web.http;
+package net.riches.ui.http;
 
 public interface HttpRequest extends HttpMessage
 {

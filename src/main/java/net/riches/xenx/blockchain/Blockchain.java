@@ -2,22 +2,18 @@ package net.riches.xenx.blockchain;
 
 import net.riches.xenx.Address;
 
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.security.*;
-import java.security.spec.KeySpec;
-import java.security.spec.PKCS8EncodedKeySpec;
-import java.security.spec.RSAPublicKeySpec;
-import java.security.spec.X509EncodedKeySpec;
+import java.io.FileOutputStream;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.PublicKey;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import org.apache.commons.codec.binary.Base64;
 import java.util.List;
 
 public class Blockchain {
-    private List<Block> chain;
-    private ArrayList<Transaction> pendingTransactions;
-    private int difficulty;
+    private final List<Block> chain;
+    private final ArrayList<Transaction> pendingTransactions;
+    private final int difficulty;
     private int minerRewards;
     private final int blockSize;
 
@@ -25,10 +21,10 @@ public class Blockchain {
         this.chain = new ArrayList<>();
         pendingTransactions = new ArrayList<>();
         this.blockSize = 1;
-        this.difficulty = 1;
+        this.difficulty = 6;
     }
 
-    public boolean addTransaction(Address sender, Address receiver, int amount, PublicKey key, KeyPair senderKey) throws Exception {
+    public boolean addTransaction(Address sender, Address receiver, int amount, PublicKey key, KeyPair senderKey) {
         Transaction transaction = new Transaction(sender, receiver, amount);
 
         if (!transaction.signTransaction(key, senderKey)) {

@@ -1,4 +1,4 @@
-package net.riches.web.server.impl;
+package net.riches.ui.server.impl;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -7,7 +7,7 @@ import java.net.SocketException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import net.riches.web.server.HttpServer;
+import net.riches.ui.server.HttpServer;
 
 public class BasicHttpServer implements HttpServer {
 	public static final String SERVER_NAME = "MyServer";

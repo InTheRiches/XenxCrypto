@@ -1,4 +1,4 @@
-package net.riches.web.server.impl;
+package net.riches.ui.server.impl;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -13,15 +13,15 @@ import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.riches.web.Http;
-import net.riches.web.http.HttpMethod;
-import net.riches.web.http.HttpRequest;
-import net.riches.web.http.HttpResponse;
-import net.riches.web.http.HttpStatusCode;
-import net.riches.web.http.HttpVersion;
-import net.riches.web.http.impl.BasicHttpRequest;
-import net.riches.web.http.impl.BasicHttpResponse;
-import net.riches.web.server.HttpWorker;
+import net.riches.ui.Http;
+import net.riches.ui.http.HttpMethod;
+import net.riches.ui.http.HttpRequest;
+import net.riches.ui.http.HttpResponse;
+import net.riches.ui.http.HttpStatusCode;
+import net.riches.ui.http.HttpVersion;
+import net.riches.ui.http.impl.BasicHttpRequest;
+import net.riches.ui.http.impl.BasicHttpResponse;
+import net.riches.ui.server.HttpWorker;
 
 public class BasicHttpWorker extends HttpWorker {
 	public BasicHttpWorker(Socket socket, BasicHttpServer server) {

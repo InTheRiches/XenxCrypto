@@ -1,9 +1,9 @@
-package net.riches.web.http;
+package net.riches.ui.http;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import net.riches.web.Http;
+import net.riches.ui.Http;
 
 public enum HttpVersion
 {

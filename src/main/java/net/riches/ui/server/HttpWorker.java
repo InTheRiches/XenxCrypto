@@ -1,4 +1,4 @@
-package net.riches.web.server;
+package net.riches.ui.server;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,8 +6,8 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.util.concurrent.Callable;
 
-import net.riches.web.http.HttpRequest;
-import net.riches.web.http.HttpResponse;
+import net.riches.ui.http.HttpRequest;
+import net.riches.ui.http.HttpResponse;
 
 public abstract class HttpWorker implements Callable<Void>
 {

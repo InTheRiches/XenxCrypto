@@ -1,7 +1,7 @@
-package net.riches.web.http.impl;
+package net.riches.ui.http.impl;
 
-import net.riches.web.http.HttpResponse;
-import net.riches.web.http.HttpStatusCode;
+import net.riches.ui.http.HttpResponse;
+import net.riches.ui.http.HttpStatusCode;
 
 public class BasicHttpResponse extends BasicHttpMessage implements HttpResponse
 {

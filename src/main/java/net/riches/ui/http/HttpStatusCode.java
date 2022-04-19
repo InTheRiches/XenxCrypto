@@ -1,4 +1,4 @@
-package net.riches.web.http;
+package net.riches.ui.http;
 
 import java.util.EnumSet;
 import java.util.HashMap;

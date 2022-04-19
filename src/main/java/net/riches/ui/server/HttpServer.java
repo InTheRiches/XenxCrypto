@@ -1,4 +1,4 @@
-package net.riches.web.server;
+package net.riches.ui.server;
 
 import java.net.Socket;
 

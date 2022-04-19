@@ -1,4 +1,4 @@
-package net.riches.web;
+package net.riches.ui;
 
 public final class Http
 {

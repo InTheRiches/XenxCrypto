@@ -1,9 +1,9 @@
-package net.riches.web.http.impl;
+package net.riches.ui.http.impl;
 
 import java.util.Map;
 
-import net.riches.web.http.HttpMessage;
-import net.riches.web.http.HttpVersion;
+import net.riches.ui.http.HttpMessage;
+import net.riches.ui.http.HttpVersion;
 
 public class BasicHttpMessage implements HttpMessage
 {

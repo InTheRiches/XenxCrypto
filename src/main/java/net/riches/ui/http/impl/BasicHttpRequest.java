@@ -1,7 +1,7 @@
-package net.riches.web.http.impl;
+package net.riches.ui.http.impl;
 
-import net.riches.web.http.HttpMethod;
-import net.riches.web.http.HttpRequest;
+import net.riches.ui.http.HttpMethod;
+import net.riches.ui.http.HttpRequest;
 
 public class BasicHttpRequest extends BasicHttpMessage implements HttpRequest
 {

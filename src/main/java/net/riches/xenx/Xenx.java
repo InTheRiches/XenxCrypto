@@ -1,7 +1,7 @@
 package net.riches.xenx;
 
-import net.riches.web.server.HttpServer;
-import net.riches.web.server.impl.BasicHttpServer;
+import net.riches.ui.server.HttpServer;
+import net.riches.ui.server.impl.BasicHttpServer;
 import net.riches.xenx.blockchain.Blockchain;
 
 import java.io.File;
