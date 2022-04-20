@@ -198,12 +198,16 @@ button {
   font-size: 1.2em;
 }
 
-.blok .kl {
-  background: #978ded;
+.blok .green {
+  background: #1abc8a;
 }
 
-.blok .pl {
-  background: #facaee;
+.blok .blue {
+  background: #12abf7;
+}
+
+.blok .red {
+  background: #FF3900;
 }
 
 .blok .no {
